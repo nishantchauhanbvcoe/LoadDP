@@ -1,0 +1,27 @@
+//Screens
+@mixin screen($breakpoint) {
+    @if $breakpoint == screen360 {
+        @media only screen and (max-width: 360px) { @content };    //360px
+    }
+    @if $breakpoint == screen480 {
+        @media only screen and (max-width: 480px) { @content };     //480px
+    }
+    @if $breakpoint == screen640 {
+        @media only screen and (max-width: 640px) { @content };    //640px
+    }
+    @if $breakpoint == screen720 {
+        @media only screen and (max-width: 720px) { @content };    //720px
+    }
+    @if $breakpoint == screen900 {
+        @media only screen and (max-width: 900px) { @content };    //900px
+    }
+    @if $breakpoint == screen1000{
+        @media only screen and (max-width: 1000px) { @content };    //1000px
+    }
+    @if $breakpoint == screen1250 {
+        @media only screen and (max-width: 1250px) { @content };    //1250px
+    }
+    @if $breakpoint == screen1150 {
+        @media only screen and (max-width: 1150px) { @content };    //1150px
+    }
+}

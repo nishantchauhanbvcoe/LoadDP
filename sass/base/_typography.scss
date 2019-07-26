@@ -1,0 +1,95 @@
+.header_themeswitch {
+    font-size: 1.3rem;
+}
+
+.switchbtn {
+    background-color: $side_colorD;
+    color: $text_colorD;
+    font-family: monospace;
+}
+
+.searchbox_selector {
+    padding-left: 1rem;
+}
+
+.searchbox_input {
+    text-align: left;
+}
+
+.search_content {
+    font-size: 2rem;
+}
+
+.userinfo {
+    font-size: 1.4rem;
+    font-family: 'Roboto Mono', monospace;
+
+    @include screen(screen900) {
+        font-size: 1.1rem;
+    }
+}
+
+.downloadTXT {
+    font-size: 2.6rem;
+    color: white;
+    transform: scaleY(.9);
+    font-family: 'Source Sans Pro', source-sans-pro, sans-serif;
+    transition: all .4s ease-in ease-out;
+}
+
+.downloadbtn_container {
+    text-decoration: none;
+
+    &:active .downloadTXT {
+        font-size: 2.47rem;
+    }
+
+    &:active .downloadSVGmain {
+        width: 2.4rem;
+        height: auto;
+    }
+}
+
+.explaintxt {
+    font-size: 1.4rem;
+    font-family: 'Roboto Mono', 'Ubuntu', sans-serif;
+
+    &_enjoy {
+        @include screen(screen900) {
+            font-size: 1rem;
+        }
+    }
+    &_lorem {
+        @include screen(screen900) {
+            font-size: 1.4rem;
+        }
+        @include screen(screen360) {
+            font-size: .7rem;
+        }
+    }
+}
+
+.loremTXT {
+    color: rgba(0, 0, 0, 0.96);
+    background-image: repeating-linear-gradient(to bottom right, rgba(82, 82, 82, 0.17), rgba(227, 227, 227, 0.32));
+}
+
+.ipAddress_main {
+    font-size: calc(1.4rem + 2px);
+    font-weight: 600;
+}
+
+.footer {
+    font-family: monospace;
+
+    &_a_ele {
+        text-decoration: none;
+        font-size: 1rem;
+        color: rgba(0, 0, 0, 0.78);
+    }
+
+    &_b_ele {
+        font-size: .8rem;
+        cursor: none;
+    }
+}

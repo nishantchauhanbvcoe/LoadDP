@@ -1,0 +1,46 @@
+// Header (logo + night/day mode)
+.header_logo {
+    width: 30%;
+    height: auto;
+    animation: heaven2hell .7s cubic-bezier(.54, -0.07, .67, 1.18);
+
+    @include screen(screen360) {
+        height: 3rem !important;
+        width: auto;
+    }
+}
+
+.switch_logo {
+    width: 1.3rem;
+    height: auto;
+    margin-bottom: -1px;
+}
+
+.instapng {
+    width: 2.5rem;
+    height: auto;
+    background-color: rgb(221, 42, 123);
+    border-radius: 6px;
+
+    &_alter {
+        width: 1.8rem;
+    }
+}
+
+.arrowSVG {
+    width: 2.1rem;
+    height: auto;
+    transition: all .4s cubic-bezier(.54, -0.07, .67, 1.18);
+}
+
+.search_logo {
+    opacity: .8;
+    width: 2.3rem;
+    height: auto;
+}
+
+.downloadSVG_main {
+    width: 2.6rem;
+    height: auto;
+    transition: all .4s ease-in ease-out;
+}

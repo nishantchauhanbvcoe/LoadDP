@@ -1,0 +1,125 @@
+<!-- 
+
+--> 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="rgba(0, 0, 0, 0.84)">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Indie+Flower|Open+Sans|Ubuntu|Roboto+Mono&display=swap" rel="stylesheet">
+    <title>LoadDP</title>
+</head>
+
+<body value="1" class="themeVal"><!-- Dark=0  Light=1-->
+
+    <div class="grid-box">
+        <div class="grid-box_main">
+
+            <!-- Header (logo + night/day mode) -->
+            <div class="grid-box_main__ele header">
+                <img src="resources/images/logo.jpg" class="header_logo">
+                <div class="header_themeswitch">
+                    <div class="switchbtn small-padding dark-color-mode">
+                        <img class="switch_logo" src="resources/svg/moon-outline.svg" onerror="this.src='resources/images/moon-outline.png'">&nbsp;Night&nbsp;Mode
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Search bar -->
+            <div class="grid-box_main__ele searchbox box-grey-outline">
+                <!--Use .getAttribue('value')-->
+                <div class="searchbox_selector grey-background-dark" value="Insta">
+                    <div class="select_inline">
+                        <img src="resources/images/insta.png" class="instapng">&nbsp;&nbsp;<img src="resources/svg/ios-arrow-back.svg" class="arrowSVG">
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-content__ele dropdown-content__elea"><img src="resources/images/insta.png" class="instapng_alter">&nbsp;Instagram</a>
+                        <a href="#" class="dropdown-content__ele dropdown-content__eleb"><img src="resources/images/facebook.png" class="instapng_alter">&nbsp;facebook</a>
+                        <!--    
+                                <a href="#">About</a>
+                                <a href="#">Settings</a> 
+                         -->
+                    </div>
+                </div>
+
+                <div class="searchbox_input">
+                    <input class="search_content" placeholder="e.g. : johnwick54497" required>
+                </div>
+
+                <div class="searchbox_go grey-background-light">
+                    <img src="resources/svg/ios-search.svg" class="search_logo">
+                </div>
+
+            </div>
+
+
+            <!-- Image + Info fetched  -->
+            <div class="grid-box_main__ele imageload" value="0">
+               <!-- <div class="userinfo">
+                    <div class="userinfo__user-name">1</div>
+                    <div class="userinfo__full-name">2</div>
+                    <div class="userinfo__biography">3</div>
+                    <div class="userinfo__followers">4</div>
+                    <div class="userinfo__following">5</div>
+                    <div class="userinfo__ID">6</div>
+                    <div class="userinfo__acc-privacy">7</div>
+                    <div class="userinfo__media-upload">8</div>
+                    </div> 
+                <img src="" class="fetchedIMG">
+                -->
+            </div>
+
+
+            <!-- Download Button -->
+            <div class="grid-box_main__ele downloadbtn">
+
+            </div>
+
+
+            <!-- Lorem ipsum... -->
+            <div class="grid-box_main__ele explaintxt">
+                <div class="ipAddress open-sans-Font explaintxt_ip">
+                    <div class="ipAddressTXT">
+                        Your IP Address is:&nbsp;
+                    </div>
+                    <div class="ipAddress_main"> Fetching...Please Wait</div>
+                </div>
+                <blockquote class="loremTXT explaintxt_lorem indie-flower-Font">
+                    &ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, vel voluptas iste magni atque eius fuga veniam, ut quibusdam eligendi ea culpa nisi reiciendis! Fuga soluta sequi eum ullam cupiditate.&rdquo;
+                </blockquote>
+                <div class="enjoyTXT explaintxt_enjoy">
+                    The Display Picture(DP) is fetched in the best available quality.
+                    <br><br>
+                    This service is free and does not require any software or registration.
+                    <br><br>
+                    Enjoy! We hope you like our service.
+                    <br>
+                </div>
+
+            </div>
+
+
+            <!-- Footer(terms|contact|privacy..  +  all rights reserved) -->
+            <div class="grid-box_main__ele footer">
+                <hr size=3.5% width=81% class="breaks">
+                <div class="footer_a">
+                    <a class="footer_a_ele footer_a_a" id="footer_a_eleid">Terms Of Use</a>
+                    <a class="footer_a_ele footer_a_b" id="footer_a_eleid">Privacy Policy</a>
+                    <a href="https://www.instagram.com/nishantchauhanbvcoe/" class="footer_a_ele footer_a_c" id="footer_a_eleid">Contact</a>
+                    <a href="https://www.instagram.com/nishantchauhanbvcoe/" class="footer_a_ele footer_a_d" id="footer_a_eleid">About</a>
+                </div>
+                <div class="footer_b">
+                    <div class="footer_b_ele footer_b_a" title="It doesn&rsquo;t stand for anything. Like IBM. Does IBM stand for anything?">&copy;2019,&nbsp;</div>
+                    <div class="footer_b_ele footer_b_b" title="It doesn&rsquo;t stand for anything. Like IBM. Does IBM stand for anything?">AEY Inc.&nbsp;</div>
+                    <div class="footer_b_ele footer_b_c" title="It doesn&rsquo;t stand for anything. Like IBM. Does IBM stand for anything?">All Rights Reserved</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+<script src="js/script.js"></script></html> 

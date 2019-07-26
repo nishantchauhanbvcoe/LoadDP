@@ -1,0 +1,405 @@
+//For whole box
+.grid-box {
+
+    background-color: $side_colorL;
+    display: grid;
+    grid-template-rows: 1.5rem max-content 1.5rem;
+    grid-template-columns: 10% 80% 10%;
+    width: 100%;
+    grid-gap: .2rem;
+
+    &_main {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        background-color: $mainbox_colorL;
+        padding: 1rem 2rem 2rem 2rem;
+
+        @include screen(screen1150) {
+            padding: 1rem .8rem 2rem .8rem;
+        }
+    }
+
+
+    //Extra spaces on sides dissapear on screen width 1000px
+    @media only screen and (max-width: 1250px) {
+        grid-template-rows: max-content;
+        grid-template-columns: max-content;
+        overflow: hidden;
+    }
+
+}
+
+//For main box
+.grid-box_main {
+    display: grid;
+    grid-template-rows: repeat(6, autofit);
+    grid-template-columns: 100%;
+    grid-row-gap: 3.2rem;
+
+    @include screen(screen1000) {
+        grid-row-gap: 2.2rem;
+    }
+}
+
+
+//Header
+.header {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+    @include screen(screen1000) {
+        grid-template-columns: 4fr 7fr 4fr;
+    }
+    @include screen(screen360) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    &_logo {
+        grid-column: 2 / 3;
+    }
+
+    &_themeswitch {
+        grid-column: 3 / 4;
+        align-self: center;
+        justify-self: end;
+        
+        .switch_logo {
+            margin-bottom: -.2rem;
+        }
+        @include screen(screen1000) {
+            margin-right: 1rem;
+        }
+    }
+}
+
+//Searchbox
+.searchbox {
+    margin: -1.4rem 13.2rem auto 13.2rem;
+    display: grid;
+    grid-template-rows: 3.7rem;
+    grid-template-columns: 3fr 14fr 2fr;
+
+    @include screen(screen1000) {
+        margin: -.4rem 3.2rem auto 3.2rem;
+    }
+
+    &_selector {
+        grid-column: 1 / 2;
+
+        .select_inline {
+            margin-top: .5rem;
+            align-self: center;
+            align-items: center;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+        }
+    }
+
+    &_input {
+        padding-left: 1rem;
+        grid-column: 2 / 3;
+        align-self: center;
+    }
+
+    &_go {
+        grid-column: 3 / 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+//Image + Info fetched
+.imageload {
+    margin: auto 5rem;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+
+    @include screen(screen1250) {
+        margin: auto 3rem;
+    }
+
+    @include screen(screen1150) {
+        margin: auto 0rem;
+    }
+
+    .userinfo {
+        grid-row: 1 / 2;
+        padding-bottom: 3.4rem;
+        display: grid;
+        grid-template-columns: 1px 1fr 1fr 1px;
+        grid-template-rows: repeat(5, auto-fit);
+        grid-row-gap: 1rem;
+        grid-column-gap: .8rem;
+
+        @include screen(screen1250) {
+            grid-template-columns: 1px 1fr 1px;
+            grid-template-rows: repeat(9, auto-fit);
+        }
+
+        @include screen(screen1000) {
+            padding-bottom: 1.4rem;
+        }
+        @include screen(screen360) {
+            padding: auto 3px auto 3px;
+            grid-template-rows: repeat(9, auto-fit);
+            grid-template-columns: 1fr;
+        }
+
+        & > div {
+            background-color: rgba(204, 204, 204, 0.56);
+            color: #393939;
+            padding: .3rem 1rem;
+        }
+
+        &__user-name {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+
+            @include screen(screen1250) {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+            }
+            @include screen(screen360) {
+                grid-column: 1 / 2;
+            }
+        }
+
+        &__full-name {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+
+            @include screen(screen1250) {
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+            }
+            @include screen(screen360) {
+                grid-column: 1 / 2;
+            }
+        }
+
+        &__biography {
+            grid-column: 2 / 4;
+            grid-row: 2 / 3;
+
+            @include screen(screen1250) {
+                grid-column: 2 / 3;
+                grid-row: 3 / 4;
+            }
+            @include screen(screen360) {
+                grid-column: 1 / 2;
+            }
+        }
+
+        &__followers {
+            grid-column: 2 / 3;
+            grid-row: 3/4;
+
+            @include screen(screen1250) {
+                grid-column: 2 / 3;
+                grid-row: 4 / 5;
+            }
+            @include screen(screen360) {
+                grid-column: 1 / 2;
+            }
+        }
+
+        &__following {
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+
+            @include screen(screen1250) {
+                grid-column: 2 / 3;
+                grid-row: 5 / 6;
+            }
+            @include screen(screen360) {
+                grid-column: 1 / 2;
+            }
+        }
+
+        &__acc-privacy {
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
+
+            @include screen(screen1250) {
+                grid-column: 2 / 3;
+                grid-row: 6 / 7;
+            }
+            @include screen(screen360) {
+                grid-column: 1 / 2;
+            }
+        }
+
+        &__media-upload {
+            grid-column: 3 / 4;
+            grid-row: 4 / 5;
+
+            @include screen(screen1250) {
+                grid-column: 2 / 3;
+                grid-row: 7 / 8;
+            }
+            @include screen(screen360) {
+                grid-column: 1 / 2;
+            }
+        }
+
+        &__ID {
+            grid-column: 2 / 4;
+            grid-row: 5 / 6;
+
+            @include screen(screen1250) {
+                grid-column: 2 / 3;
+                grid-row: 8 / 9;
+            }
+            @include screen(screen360) {
+                grid-column: 1 / 2;
+            }
+        }
+    }
+
+    .fetchedIMG {
+        grid-row: 2 / 3;
+        object-fit: contain;
+        width: auto;
+        height: 110vh;
+        justify-self: center;
+
+        @include screen(screen1250) {
+            height: 55rem;
+            width: auto;
+        }
+        @include screen(screen1000) {
+            height: 50rem;
+            width: auto;
+        }
+
+        @include screen(screen900) {
+            height: 40rem;
+            width: auto;
+        }
+        @include screen(screen360) {
+            height: auto;
+            width: 90%;
+        }
+    }
+}
+
+//Download button
+.downloadbtn {
+    justify-self: center;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: center;
+    align-content: center;
+
+    &_container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: .25rem;
+        cursor: pointer;
+    }
+}
+
+//Text for explanation
+.explaintxt {
+    display: flex;
+    flex-direction: column;
+
+    &_ip {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-items: center;
+        align-items: flex-end;
+    }
+
+    &_lorem {
+        margin: 2.6rem 9.5% 1.7rem 9.5%;
+        padding: 1% .5%;
+        @include screen(screen900){
+            margin: 1.6rem 1.5% 1.7rem 1.5%;
+        }
+        @include screen(screen360){
+            margin: 1.6rem .2% 1.7rem .2%;
+            padding: 1% .1%;
+        }
+    }
+
+    &_enjoy {
+        margin: auto 18%;
+        @include screen(screen900){
+            margin: auto 12%;
+        }
+        @include screen(screen360){
+            margin: auto 1rem;
+        }
+    }
+}
+
+//Footer
+.footer {
+
+    //footera
+    &_a {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 2fr repeat(4, max-content) 2fr;
+        justify-items: center;
+        @include screen(screen1000){
+            grid-template-columns: 1fr repeat(4, max-content) 1fr;
+        }
+        @include screen(screen720){
+            grid-template-columns: 10px repeat(4, max-content) 10px;
+        }
+        &_ele {
+            margin: .1rem 1.3rem;
+        }
+
+        &_a {
+            grid-column: 2 / 3;
+        }
+
+        &_b {
+            grid-column: 3 / 4;
+        }
+
+        &_c {
+            grid-column: 4 / 5;
+        }
+
+        &_d {
+            grid-column: 5 / 6;
+        }
+    }
+
+    //fooeterb
+    &_b {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 3fr repeat(3, max-content) 3fr;
+        margin-bottom: -1rem;
+
+        //margin-right: -.7rem;
+        &_ele {
+            margin: .2rem .3rem auto .3rem;
+        }
+
+        &_a {
+            grid-column: 2 / 3;
+        }
+
+        &_b {
+            grid-column: 3 / 4;
+        }
+
+        &_c {
+            grid-column: 4 / 5;
+        }
+    }
+}

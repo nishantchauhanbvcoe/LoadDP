@@ -1,0 +1,54 @@
+//Theme switch Button
+.switchbtn{
+    cursor: pointer;
+    transition: all .4s;
+    backface-visibility: hidden;
+    overflow: hidden;
+    
+     &:active{
+        transform: scaleX(.95);
+         top:2px;
+    }
+}
+
+.searchbox{
+    
+    &_selector,
+    &_go
+    {
+    cursor: pointer;
+    }
+    
+    &_go:active .search_logo{
+        transform: scale(.8);
+    }
+}
+
+.footer_a_ele{
+    cursor: pointer;
+    transition: all .5s;
+    &:hover{
+        color: rgba(116, 42, 93, 0.84);
+        text-transform:uppercase;
+        transform: translateY(-1px);
+        text-shadow: 1px 1px rgba(128, 56, 105, 0.19), -2px -2px rgba(116, 42, 93, 0.22), 0 -2px rgba(116, 42, 93, 0.23), -2px 0 rgba(116, 42, 93, 0.26);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

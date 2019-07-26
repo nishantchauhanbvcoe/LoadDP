@@ -1,0 +1,68 @@
+.small-padding{
+    padding: .2rem !important;
+}
+
+.large-padding{
+    padding:.3rem .5rem !important;
+}
+
+.grey-background-dark{
+    background-color: rgb(224, 224, 224) !important;
+}
+
+.grey-background-light{
+    background-color: rgb(242, 242, 242) !important;
+}
+
+.box-grey-outline{
+    border: .3rem solid rgb(224, 224, 224) !important;
+}
+
+.box-greyDark-outline{
+    border: .3rem solid rgba(34, 32, 32, 0.45) !important;
+}
+
+.blue-background-light{
+    background-color: rgba(32, 152, 245, 0.94) !important;
+    &:hover{
+        background-color: rgba(49, 144, 255, 0.99) !important;
+    }
+}
+
+.open-sans-Font{
+    font-family: 'Open Sans', open-sans,monospace,sans-serif !important;
+}
+
+.indie-flower-Font{
+    font-family: 'Indie Flower', cursive,sans-serif !important;
+}
+
+.breaks{
+    color: aqua !important;
+    background-color: #585849 !important;
+    margin: auto !important;
+}
+
+.blur-border-around{
+    box-shadow: 4px 4px 4px rgba(126, 126, 126, 0.45) !important;
+}
+
+.dark-color-mode{
+    background-color: $side_colorD !important;
+    color: $text_colorD !important;
+    font-family: monospace !important;
+}
+
+.light-color-mode{
+    background-color: $side_colorL !important;
+    color: $text_colorL !important;
+    font-family: monospace !important;
+}
+
+.btn-click-light:active{
+        background-color: rgba(218, 222, 242, 0.9) !important;
+}
+
+.btn-click-dark:active{
+        background-color: rgba(34, 32, 32, 0.45) !important;
+}

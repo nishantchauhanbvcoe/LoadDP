@@ -1,0 +1,26 @@
+{
+    "name": "loaddp",
+    "version": "1.0.0",
+    "description": "To fetch DP of a user",
+    "main": "index.js",
+    "scripts": {
+        "watch:sass": "node-sass sass/mains.scss css/styles.css -w",
+        "watch:sasslast": "node-sass sass/mains.scss css/styles.css",
+        "prefix:css": "postcss --use autoprefixer -b \"last 5 versions\" css/styles.css -o css/styles.prefixed.css",
+        "compress:css": "node-sass css/styles.prefixed.css css/styles.compressed.css --output-style compressed",
+        "build:css": "npm-run-all watch:sasslast prefix:css compress:css",
+        "devserver": "live-server",
+        "start": "npm-run-all --parallel devserver watch:sass"
+    },
+    "author": "Nishant",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^9.6.0",
+        "node-sass": "^4.12.0",
+        "npm-run-all": "^4.1.5",
+        "postcss-cli": "^6.1.2"
+    },
+    "dependencies": {
+        "live-server": "^1.2.1"
+    }
+}

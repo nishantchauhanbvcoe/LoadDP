@@ -1,0 +1,17 @@
+@keyframes heaven2hell{
+    0%{
+        transform: translateY(-1rem) scaleX(.9);
+        opacity: 0;
+    }
+    
+    80%{
+        transform: translateY(0.1rem) scaleX(1.05);
+        opacity: .8;
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(0) scaleX(1);
+    }
+}
+
